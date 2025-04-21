@@ -77,7 +77,7 @@ def Hel_diag(R):
 
 @jit(nopython=True)
 def dHel0(R):
-    '''bath derivative of the state independent part of the Hamiltonian'''
+    '''Bath derivative of the state independent part of the Hamiltonian'''
     dH0 = np.zeros((len(R)))
     for j in range(NMol):
         dH0[j * NModes : (j + 1) * NModes] = ωk**2 * R[j * NModes : (j + 1) * NModes] 
